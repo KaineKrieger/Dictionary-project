@@ -5,8 +5,10 @@ def lore_locater(key_list):
     for i in range(len(key_list)):
         if Second_interest == key_list[i]:
 
-            print(lore.phyrexians[key_list[i]])
+            print(lore.Second_interest[key_list[i]])
+            Answer = input("Would you like to know more?(yes/no)")
 
+            print(lore.key_list[i])
 
 
 
@@ -21,12 +23,19 @@ if User_interest == "Eldrazi":
     Second_interest = input("which Eldrazi titan do you wish to know about? " + key_string + "? ")
     if Second_interest == "Emrakul":
         print(lore.Eldrazi["Emrakul"])
+        print(lore.Emrakul)
+        answer = input("would you like to know more?(yes/no): ")
+        if answer == "yes":
+            print(lore.Emrakul)
 
     if Second_interest == "Ulamog":
         print(lore.Eldrazi["Ulamog"])
 
     if Second_interest == "Kozilek":
         print(lore.Eldrazi["Kozilek"])
+
+
+
 
 
 if User_interest == "Gatewatch":
@@ -40,7 +49,16 @@ if User_interest == "Gatewatch":
 
 
 
+
+
 if User_interest == "Phyrexians":
     key_list = list(lore.Phyrexians.keys())
     key_string = ", ".join(key_list)
     Second_interest = input("which Phyrexian Praetor do you wish to know about? " + key_string + "? ")
+    for i in range(len(key_list)):
+        if Second_interest == key_list[i]:
+            print(lore(Second_interest[key_list[i]]))
+            Answer = input("Would you like to know more?(yes/no)")
+
+            print(lore(Second_interest))
+
