@@ -14,10 +14,13 @@ def lore_locater(details):
 x = True
 
 while x == True:
-    user_interest = input("which group do you wish to know about? Phyrexians Eldrazi or Gatewatch?: ")
-    user_interest = user_interest.lower()
+    user_interest = input("which group do you wish to know about? Phyrexians Eldrazi or Gatewatch?: " +
+                          "Eldrazi: 1 " +
+                          "Gatewatch: 2 " +
+                          "Phyrexians: 3 ")
+    
 
-    if user_interest == "eldrazi":
+    if user_interest == "1" :
         details = lore.eldrazi
         titans = list(details.keys())
         key_string = ", ".join(titans)
@@ -26,16 +29,19 @@ while x == True:
         lore_locater(details)
         
 
-    if user_interest == "gatewatch":
+    if user_interest == "2":
         details = lore.gatewatch
         walkers = list(details.keys())
         key_string = ", ".join(walkers)
-        Second_interest = input("which Gatewatch Planeswalker do you wish to know about? " + key_string+ "? ")
+#        for i in range(len(walkers)):
+#            key_string = key_string + walkers[i] + ": " + str(i + 1) + "? "
+        
+        Second_interest = input("which Gatewatch Planeswalker do you wish to know about? " + key_string + "? ")
         
         lore_locater(details)
         
 
-    if user_interest == "phyrexians":
+    if user_interest == "3":
         details = lore.phyrexians
         praetors = list(details.keys())
         key_string = ", ".join(praetors)
