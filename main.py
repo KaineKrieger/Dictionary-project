@@ -50,12 +50,12 @@ while x == True:
         lore_locater(details)
     
     while x == True:
-        cycler = input("would you like to know about a different group?(yes/no): ")
-        if cycler == "yes":
+        cycler = input("would you like to know about a different group?(y/n): ")
+        if cycler == "y":
            break
-        elif cycler == "no":
+        elif cycler == "n":
             x = False
-        elif cycler != "yes" or "no":
+        elif cycler != "y" or "n":
             print("error please only answer yes or no")
 
 
